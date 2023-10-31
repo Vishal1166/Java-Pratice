@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+#s1, #s2 {
+	color: red;
+	border: 3px;
+}
+</style>
+</head>
+<body >
+	<form>
+		<table>
+			<tr>
+				<td>Register Id<span id=s2>*</span></td>
+				<td><input type="text" id="rid" required></td>
+			</tr>
+			<tr>
+				<td>User Name<span id=s2>*</span></td>
+				<td><input type="text" id="uname" required></td>
+			</tr>
+			<tr>
+				<td>Gender<span id=s2>*</span></td>
+				<td><input type="radio" value="Male" name="gen">Male<input
+					type="radio" value="Female" name="gen">Female</td>
+			</tr>
+			<tr>
+				<td>Password<span id=s2>*</span></td>
+				<td><input type="password" id="pass"
+					pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+					title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+					required></td>
+			</tr>
+			<tr>
+				<td>Repeat Password<span id=s2>*</span></td>
+				<td><input type="password" id="rpass"
+					pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+					title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+					required></td>
+				<td><span id=s1></span></td>
+			</tr>
+			<tr>
+				<td>Email<span id=s2>*</span></td>
+				<td><input type="email" id="email" required></td>
+			</tr>
+			<tr>
+				<td>Mobile no<span id=s2>*</span></td>
+				<td><input type="text" id="mno" pattern="[789][0-9]{9}"
+					required></td>
+			</tr>
+			<tr>
+				<td>City<span id=s2>*</span></td>
+				<td><select>
+						<option>select</option>
+						<option>Aurangabad</option>
+						<option>jalgaon</option>
+						<option>pune</option>
+						<option>mumbai</option>
+						<option>nasik</option>
+						<option>chalisgaon</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Pin code<span id=s2>*</span></td>
+				<td><input type="text" id="mno" min="6" required></td>
+			</tr>
+			<tr>
+				<td>State<span id=s2>*</span></td>
+				<td><select>
+						<option>select</option>
+						<option>maharastra</option>
+						<option>karnaka</option>
+						<option>gujrat</option>
+						<option>delhi</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Country<span id=s2>*</span></td>
+				<td><select>
+						<option>select</option>
+						<option>India</option>
+						<option>UK</option>
+						<option>Amerika</option>
+						<option>Australia</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Register"
+					onclick="validation()"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+<script>
+	function validation() {
+		var p1 = document.getElementById("pass").value;
+		var p2 = document.getElementById("rpass").value;
+		if (p2 != p1) {
+			document.getElementById("s1").innerHTML = "password not match";
+		}
+	}
+</script>
+</html>
+

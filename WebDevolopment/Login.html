@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+#s1,#s2
+{
+color: red;
+border: 3px;
+}
+</style>
+</head>
+
+<body>
+	<table border="3" >
+		<tr>
+			<td>User Name</td>
+			<td><input type="text" id="uname"></td>
+			<td><span id=s1></span></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input type="text" id="pass"></td>
+			<td><span id=s2></span></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Login" onclick="validation()"></td>
+		</tr>
+	</table>
+</body>
+
+<script>
+	function validation() {
+		var unm = document.getElementById("uname").value;
+		var pas = document.getElementById("pass").value;
+		if (unm == '') {
+			document.getElementById("s1").innerHTML = "Plz Enter Username";
+			return false;
+		}
+		if (pas == '') {
+			document.getElementById("s2").innerHTML = "Plz Enter Password";
+			return false;
+		}
+		if (unm == "admin") {
+			if (pas == "admin") {
+				alert("Valid data...")
+			} else {
+				document.getElementById("s2").innerHTML = "Invalid password";
+			}
+		} else {
+			document.getElementById("s1").innerHTML = "Invalid Username";
+		}
+	}
+</script>
+</html>

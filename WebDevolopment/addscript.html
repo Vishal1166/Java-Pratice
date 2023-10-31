@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>calculator</title>
+</head>
+<body>
+
+Number <input type="text" id="no1"><br>
+Number <input type="text" id="no2"><br>
+<input type="submit" value="+" onclick="add()"/>
+<input type="submit" value="-" onclick="sub()"/>
+<input type="submit" value="*" onclick="mul()"/>
+<input type="submit" value="/" onclick="div()"/>
+<script>
+function add()
+{
+	alert(" Result is coming...");
+	var n1=document.getElementById("no1").value;
+	var n2=document.getElementById("no2").value;
+	alert(parseInt(n1)+parseInt(n2));
+	}
+function sub()
+{
+	alert(" Result is coming...");
+	var n1=document.getElementById("no1").value;
+	var n2=document.getElementById("no2").value;
+	alert(parseInt(n1)-parseInt(n2));
+	}
+function mul()
+{
+	alert(" Result is coming...");
+	var n1=document.getElementById("no1").value;
+	var n2=document.getElementById("no2").value;
+	alert(parseInt(n1)*parseInt(n2));
+	}
+function div()
+{
+	alert(" Result is coming...");
+	var n1=document.getElementById("no1").value;
+	var n2=document.getElementById("no2").value;
+	alert(parseInt(n1)/parseInt(n2));
+	}
+</script>
+</body>
+</html>
